@@ -43,16 +43,17 @@
 </script>
 
 <style scoped lang="less">
+    @import "../../app.less";
     .news_container{
         h2{
-            font-size:14px;
+            font-size:14rem/@baseFontSize;
             color: #000;
         }
         p{
             display: flex;
             justify-content: space-between;
             span{
-                font-size: 12px;
+                font-size: 12rem/@baseFontSize;
                 color: rgb(31,213,354);
             }
         }

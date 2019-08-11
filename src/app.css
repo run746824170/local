@@ -1,3 +1,71 @@
-body{
-    background-color: #fff !important;
+@charset "utf-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 42.66666667px;
+  }
 }
+@media (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 51.2px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 53.33333333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 56.53333333px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 64px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 72px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 85.33333333px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 96px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 100px;
+  }
+}
+body {
+  background-color: #fff !important;
+  touch-action: none;
+}
+figure {
+  margin: 0.1rem 0.1rem;
+  display: inline-block !important;
+}
+figure img {
+  width: 1rem;
+  height: 0.8rem;
+  margin: 0 auto;
+  box-shadow: 0 0 0.09rem #9999;
+}
+/*# sourceMappingURL=app.css.map */

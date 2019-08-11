@@ -2,7 +2,7 @@
 //导入项目框架
 import Vue from 'Vue'
 import App from './app.vue'
-import './app.css'
+import './app.less'
 
 //导入mint-ui
 import MintUI from 'mint-ui'
@@ -30,6 +30,10 @@ Vue.filter('dateFormat',function (dataStr,partern='YYYY-MM-DD HH:mm:ss'){
 import './lib/mui/css/mui.css'
 //导入mui扩展图标库
 import './lib/mui/css/icons-extra.css'
+
+//导入图片预览插件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview);
 new Vue({
     el:'#app',
     render:c=>c(App),

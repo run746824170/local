@@ -1,12 +1,7 @@
 <template>
     <div>
         <!--轮播图-->
-        <mt-swipe :auto="4000">
-            <mt-swipe-item v-for="item in banner" :key="item.id">
-                <img :src="item.img" alt="">
-            </mt-swipe-item>
-        </mt-swipe>
-
+        <swiper :getbanner="banner" :isfull="true"></swiper>
         <!--六宫格-->
         <ul class="mui-table-view mui-grid-view mui-grid-9">
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
@@ -16,15 +11,16 @@
                 </router-link>
             </li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                <router-link to="/home/pictures">
+                <router-link to="/home/photoList">
                     <img src="../../images/menu2.png" alt="">
                     <div class="mui-media-body">图片分享</div>
                 </router-link>
             </li>
-            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                <img src="../../images/menu3.png" alt="">
-                <div class="mui-media-body">商品购买</div>
-            </a>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                <router-link to="/home/shopping">
+                    <img src="../../images/menu3.png" alt="">
+                    <div class="mui-media-body">商品购买</div>
+                </router-link>
             </li>
             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
                 <img src="../../images/menu4.png" alt="">
@@ -46,6 +42,7 @@
 </template>
 
 <script>
+    import swiper from '../common/swiper.vue'
     export default {
         name: "home",
         data() {
@@ -54,42 +51,39 @@
             }
         },
         created() {
-            this.getbanner();
+            this.getBanner();
         },
         methods: {
-            getbanner() {
+            getBanner() {
                 this.$axios.get('api/getlunbo')
                     .then(result => {
                         if (result.data.status == 0) {
-                            // console.log(result.data.message);
                             this.banner = result.data.message;
                         }
                     })
             }
+        },
+        components:{
+            swiper
         }
     }
 </script>
-
 <style scoped lang="less">
-    .mint-swipe {
-        height: 280px;
-        img {
-            width: 100%;
-            display: block;
-            height: 280px;
-        }
-    }
-
-    .mui-table-view {
-        .mui-table-view-cell {
-            width: 33.33%;
-            border: none;
-            a {
-                width: 100%;
-                img {
-                    width: 50%;
-                }
+    @import "../../app.less";
+    .mui-grid-view.mui-grid-9 {
+        background-color: #fff;
+            img{
+                width:100rem/@baseFontSize;
+                height:100rem/@baseFontSize;
+            }
+            .mui-media-body{
+                font-size:20rem/@baseFontSize;
             }
         }
+
+    .mui-grid-view.mui-grid-9 .mui-table-view-cell {
+        border: none;
     }
+
+
 </style>

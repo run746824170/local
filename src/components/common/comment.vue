@@ -74,17 +74,18 @@
     }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
+    @import "../../app.less";
     .cmt_container {
         .cmt_list {
-            margin-top: 10px;
+            margin-top: 10rem/@baseFontSize;
             .cmt_title {
                 height: 50px;
                 background-color: #cccccc;
-                border-radius: 4px;
+                border-radius: 4rem/@baseFontSize;
                 p {
                     color: #000;
-                    margin-top: 20px;
+                    margin-top: 20rem/@baseFontSize;
                 }
             }
         }

@@ -44,19 +44,20 @@
 </script>
 
 <style scoped lang="less">
+    @import "../../app.less";
     .info{
-        padding: 0 5px;
+        padding: 0 5rem/@baseFontSize;
         h2{
             color: red;
-            font-size:18px;
-            margin: 15px 0;
+            font-size:18rem/@baseFontSize;
+            margin: 15rem/@baseFontSize 0;
             text-align: center;
         }
         p{
             display: flex;
-            font-size: 14px;
+            font-size: 14rem/@baseFontSize;
             justify-content: space-between;
-            margin-bottom:10px;
+            margin-bottom:10rem/@baseFontSize;
             span{
                 color: rgb(31,213,354);
             }
