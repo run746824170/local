@@ -85,7 +85,7 @@
             img {
                 width: 100%;
                 display: block;
-                height:400rem/@baseFontSize;
+                height:520rem/@baseFontSize;
             }
             .info {
                 color: white;

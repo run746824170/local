@@ -1,14 +1,16 @@
 <template>
     <div class="vue-container">
         <!--header-->
-        <mt-header fixed title="vue项目"></mt-header>
-
+        <mt-header fixed title="vue项目">
+            <span slot="left" v-show="flag" @click="goBack">
+                <mt-button icon="back">返回</mt-button>
+            </span>
+        </mt-header>
         <!--占位-->
         <transition>
             <router-view></router-view>
         </transition>
         <!--container-->
-
         <!--bottom-->
         <nav class="mui-bar mui-bar-tab">
             <router-link class="my-mui-tab-item" to="/home">
@@ -20,7 +22,7 @@
                 <span class="mui-tab-label">会员</span>
             </router-link>
             <router-link class="my-mui-tab-item" to="/shopCar">
-                <span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">7</span></span>
+                <span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">{{$store.getters.getAllCount}}</span></span>
                 <span class="mui-tab-label">购物车</span>
             </router-link>
             <router-link class="my-mui-tab-item" to="/search">
@@ -33,7 +35,25 @@
 
 <script>
     export default {
-        name: "app"
+        name: "app",
+        data(){
+            return{
+                flag:false
+            }
+        },
+        created(){
+            this.flag=this.$route.path==='/home'?false:true;
+        },
+        methods:{
+            goBack(){
+                this.$router.go(-1);
+            }
+        },
+        watch:{
+            '$route.path':function (newVal) {
+                this.flag=newVal==='/home'?false:true
+            }
+        }
     }
 </script>
 

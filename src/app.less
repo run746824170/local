@@ -21,9 +21,6 @@
 .Mixin(@len);
 
 
-
-
-
 body{
     background-color: #fff !important;
     touch-action: none;
@@ -36,5 +33,25 @@ figure {
         height:80rem/@baseFontSize;
         margin: 0 auto;
         box-shadow: 0 0 9rem/@baseFontSize #9999;
+    }
+}
+
+//图文介绍
+.desc_container{
+    padding: 0 10rem/@baseFontSize;
+    h4{
+        color: #26a2ff;
+        text-align: center;
+    }
+    .content{
+        p{
+            font-size: 14rem/@baseFontSize;
+            margin-top: 0;
+            margin-bottom: 10rem/@baseFontSize;
+            color: #8f8f94;
+            img{
+                width: 100%;
+            }
+        }
     }
 }

@@ -32,8 +32,7 @@
             getNewList(){
                 this.$axios.get('api/getnewslist')
                     .then(result=>{
-                       if(result.data.status==0){
-                           // console.log(result);
+                       if(result.data.status===0){
                            this.list=result.data.message;
                        }
                     })

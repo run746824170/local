@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <mt-button type="default" size="large" class="more" @click="getMore">加载更多</mt-button>
+        <mt-button type="danger" size="large" class="more" @click="getMore" plain >加载更多</mt-button>
     </div>
 
 </template>
@@ -77,6 +77,9 @@
 <style scoped lang="less">
     @import "../../app.less";
     .cmt_container {
+        h4{
+            font-size: 18rem/@baseFontSize;
+        }
         .cmt_list {
             margin-top: 10rem/@baseFontSize;
             .cmt_title {
@@ -86,7 +89,11 @@
                 p {
                     color: #000;
                     margin-top: 20rem/@baseFontSize;
+                    font-size: 14rem/@baseFontSize;
                 }
+            }
+            .cmt_body{
+                font-size: 15rem/@baseFontSize;
             }
         }
         .more {

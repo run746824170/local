@@ -12,6 +12,7 @@ import PhotoDetail from './components/photo/photoDetail.vue'
 import Shop from './components/shop/shopping.vue'
 import Product from './components/shop/productDetail.vue'
 import GoodsDesc from './components/shop/goodsDesc.vue'
+import GoodsComment from './components/shop/goodsComment.vue'
 
 
 
@@ -21,7 +22,7 @@ let router = new VueRouter({
         {path: '/', redirect: '/home'},
         {path: '/home', component: Home},
         {path: '/member', component: Member},
-        {path: '/shopCar', component: Shopcar},
+        {path: '/shopCar/:id', component: Shopcar,name:'shopCart'},
         {path: '/search', component: Search},
         {path: '/home/newsList', component: newsList},
         {path: '/home/newsInfo/:id', component: NewsInfo},
@@ -29,7 +30,8 @@ let router = new VueRouter({
         {path: '/home/photoDetail/:id', component: PhotoDetail},
         {path: '/home/shopping', component: Shop},
         {path: '/home/productDetail/:id', component: Product},
-        {path: '/home/goodsDesc/:id', component: GoodsDesc,name:'goodsDesc'}
+        {path: '/home/goodsDesc/:id', component: GoodsDesc,name:'goodsDesc'},
+        {path: '/home/goodsComment/:id', component: GoodsComment,name:'goodsComment'},
     ],
     linkActiveClass:'mui-active'
 

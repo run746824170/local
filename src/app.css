@@ -68,4 +68,20 @@ figure img {
   margin: 0 auto;
   box-shadow: 0 0 0.09rem #9999;
 }
+.desc_container {
+  padding: 0 0.1rem;
+}
+.desc_container h4 {
+  color: #26a2ff;
+  text-align: center;
+}
+.desc_container .content p {
+  font-size: 0.14rem;
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+  color: #8f8f94;
+}
+.desc_container .content p img {
+  width: 100%;
+}
 /*# sourceMappingURL=app.css.map */

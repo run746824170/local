@@ -34,11 +34,5 @@
 
 <style scoped lang="less">
     @import "../../app.less";
-    .desc_container{
-        padding: 0 5rem/@baseFontSize;
-        h4{
-            color: #26a2ff;
-            text-align: center;
-        }
-    }
+
 </style>
